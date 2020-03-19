@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BikeToGoRental.Models.Bike>
+@{
+    ViewBag.Title = "Bikes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bikes</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Bike</th>
+            <th>Bike Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bike in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(bike.Name, "Details", "Bikes", new { id = bike.Id },
+               null)
+                </td>
+                <td>
+                    @bike.SurfaceType.Name
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

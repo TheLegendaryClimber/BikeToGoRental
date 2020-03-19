@@ -1,0 +1,16 @@
+﻿
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    @Html.ActionLink("BikeToGo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav">
+            <li><a class="nav-design">@Html.ActionLink("Customers", "Index", "Customers")</a></li>
+            <li><a class="nav-design">@Html.ActionLink("Bikes", "Index", "Bikes")</a></li>
+        </ul>
+        <div class="navbar-nav ml-auto">
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</nav>

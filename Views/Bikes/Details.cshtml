@@ -1,0 +1,14 @@
+﻿@model BikeToGoRental.Models.Bike
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li>Surface type: @Model.SurfaceType.Name</li>
+    <li>Model: @Model.Model</li>
+    <li>Gears: @Model.Gears</li>
+    <li>Sizes: @Model.FrameSize</li>
+</ul>
