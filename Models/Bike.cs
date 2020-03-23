@@ -15,6 +15,7 @@ namespace BikeToGoRental.Models
         public string Model { get; set; }
         public string Gears { get; set; }
         public string FrameSize { get; set; }
+        public int AmountInStock { get; set; }
 
     }
 }
