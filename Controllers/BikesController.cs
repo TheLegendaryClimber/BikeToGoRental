@@ -27,13 +27,13 @@ namespace BikeToGoRental.Controllers
 
         public ViewResult Index()
         {
-            var bikes = _context.Bikes.Include(b => b.SurfaceType).ToList();
+            var bikes = _context.Bikes.Include(c => c.SurfaceType).ToList();
 
             return View(bikes);
         }
         public ActionResult Details(int id)
         {
-            var bike = _context.Bikes.Include(b => b.SurfaceType).SingleOrDefault(b => b.Id == id);
+            var bike = _context.Bikes.Include(c => c.SurfaceType).SingleOrDefault(c => c.Id == id);
 
             if (bike == null)
                 return HttpNotFound();
