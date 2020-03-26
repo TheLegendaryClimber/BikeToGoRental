@@ -2980,7 +2980,7 @@ fieldset:disabled a.btn {
 .btn-danger {
   color: #fff;
   background-color: #FF4136;
-  border-color: #FF4136;
+
 }
 
 .btn-danger:hover {
@@ -3368,7 +3368,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #158CBA;
+  color: #FFFFFF; !important;
   text-decoration: none;
 }
 

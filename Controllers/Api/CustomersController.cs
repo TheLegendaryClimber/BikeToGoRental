@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using System.Data.Entity;
 
 namespace BikeToGoRental.Controllers.Api
 {
@@ -20,7 +21,7 @@ namespace BikeToGoRental.Controllers.Api
         public IEnumerable<Customer> GetCustomers()
 
         {
-            return _context.Customers.ToList();
+            return _context.Customers.Include(c => c.MembershipType).ToList();
 
         }
 
