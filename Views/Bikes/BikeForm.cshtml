@@ -1,0 +1,54 @@
+﻿@model BikeToGoRental.ViewModels.BikeFormViewModel
+@{
+    ViewBag.Title = "BikeForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add new or edit existing bike</h2>
+
+@using (Html.BeginForm("Save", "Bikes"))
+{
+    @Html.ValidationSummary(true, "Please fill in all the missing required fields.")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.Name)
+        @Html.TextBoxFor(m => m.Bike.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.Model)
+        @Html.TextBoxFor(m => m.Bike.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.Model)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.Gears)
+        @Html.TextBoxFor(m => m.Bike.Gears, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.Gears)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.FrameSize)
+        @Html.TextBoxFor(m => m.Bike.FrameSize, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.FrameSize)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.AmountInStock)
+        @Html.TextBoxFor(m => m.Bike.AmountInStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.AmountInStock)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Bike.SurfaceTypeId)
+        @Html.DropDownListFor(m => m.Bike.SurfaceTypeId, new SelectList(Model.SurfaceTypes, "Id", "Name"), "Select Surface Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Bike.SurfaceTypeId)
+    </div>
+    @Html.HiddenFor(m => m.Bike.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">
+        Save
+
+    </button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

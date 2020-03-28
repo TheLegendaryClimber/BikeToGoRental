@@ -57,19 +57,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav {
-  display: block;
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
 }
 
-section {
-    border: 1px solid darkblue;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    height: 280px;
-    overflow: hidden;
-    background-color: green;
-    background-size: cover
-}
+
 
 body {
   margin: 0;
@@ -177,11 +169,16 @@ a {
     background-color: transparent;
     font-size: 20px;
     margin-top:-5x;
+    margin-right: 10px;
 }
 
-a:hover {
-  color: #0d5875;
-  text-decoration: underline;
+a#registerLink {
+    color: #158CBA;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: -5x;
+    margin-right: 20px !important;
 }
 
 a:not([href]) {
@@ -3368,8 +3365,9 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #FFFFFF; !important;
+  color: #FFFFFF !important;
   text-decoration: none;
+  background-color: #FF4136;
 }
 
 .btn-link:hover {
@@ -10772,7 +10770,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-primary {
-  border-color: #127ba3;
+    border-color: lightgrey;
 }
 
 .bg-dark {
@@ -10788,6 +10786,7 @@ a.text-dark:hover, a.text-dark:focus {
   border-style: solid;
   border-width: 0 1px 4px 1px;
   text-transform: uppercase;
+  background-color: lightgrey;
 }
 
 .btn:not(.disabled):hover {

@@ -37,6 +37,8 @@ namespace BikeToGoRental.Controllers
             return View("CustomerForm", viewModel);
                 }
 
+
+        // Saving form
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
@@ -80,6 +82,8 @@ namespace BikeToGoRental.Controllers
             return View(customers);
         }
 
+
+        // GET: Customers details
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
@@ -89,6 +93,8 @@ namespace BikeToGoRental.Controllers
 
             return View(customer);
         }
+
+        // GET: Editing customer
         public ActionResult Edit (int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
