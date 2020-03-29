@@ -280,6 +280,10 @@
     <Compile Include="Migrations\202003281650370_SeedUsers.designer.cs">
       <DependentUpon>202003281650370_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003292012058_AddingNewPropertiesToUser.cs" />
+    <Compile Include="Migrations\202003292012058_AddingNewPropertiesToUser.designer.cs">
+      <DependentUpon>202003292012058_AddingNewPropertiesToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bike.cs" />
@@ -288,6 +292,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18Years.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Models\SurfaceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -1046,6 +1051,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Bikes\BikeForm.cshtml" />
+    <Content Include="Views\Bikes\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
@@ -1093,6 +1099,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003281650370_SeedUsers.resx">
       <DependentUpon>202003281650370_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003292012058_AddingNewPropertiesToUser.resx">
+      <DependentUpon>202003292012058_AddingNewPropertiesToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

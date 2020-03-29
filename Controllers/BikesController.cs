@@ -28,6 +28,7 @@ namespace BikeToGoRental.Controllers
 
 
         // Adding new bike
+        [Authorize(Roles = RoleName.CanManageBikes)]
         public ActionResult New()
         {
 
@@ -42,6 +43,7 @@ namespace BikeToGoRental.Controllers
         }
 
         // Saving new bike
+        [Authorize(Roles = RoleName.CanManageBikes)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Bike bike)
@@ -84,11 +86,14 @@ namespace BikeToGoRental.Controllers
 
         public ViewResult Index()
         {
-            var bikes = _context.Bikes.Include(b => b.SurfaceType).ToList();
+            if (User.IsInRole("CanManageBikes"))
 
-            return View(bikes);
+            return View("Index");
 
-            
+            return View("ReadOnlyIndex");
+
+
+
         }
         public ActionResult Details(int id)
         {
@@ -102,6 +107,7 @@ namespace BikeToGoRental.Controllers
         }
 
         // Editing bikes
+        [Authorize(Roles = RoleName.CanManageBikes)]
         public ActionResult Edit(int id)
         {
             var bike = _context.Bikes.SingleOrDefault(b => b.Id == id);

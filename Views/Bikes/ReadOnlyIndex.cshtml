@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BikeToGoRental.Models.Bike>
+@{
+    ViewBag.Title = "Bikes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center;">Bikes</h2>
+
+    <table id="bikes" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Bike</th>
+                <th>Model</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#bikes").DataTable({
+                ajax: {
+                    url: "https://localhost:44329/api/bikes",
+                    dataSrc: ""
+                },
+                columns: [
+
+                    {
+                        data: "name"
+                        
+                    },
+
+                    {
+                        data: "model"
+                    }
+                   
+                ]
+            });
+  
+        });
+
+
+    </script>
+
+}

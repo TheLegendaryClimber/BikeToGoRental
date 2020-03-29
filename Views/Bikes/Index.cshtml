@@ -6,17 +6,7 @@
 
 <h2 style="text-align: center;">Bikes</h2>
 
-@if (!Model.Any())
-{
-    <p>There aren't any bikes yet.</p>
-    <p>
-        @Html.ActionLink("New Bike", "New", "Bikes", null, new { @class = "btn btn-primary" })
-    </p>
-}
 
-else
-
-{
 
     <p>
         @Html.ActionLink("New Bike", "New", "Bikes", null, new { @class = "btn btn-primary" })
@@ -26,32 +16,51 @@ else
             <tr>
                 <th>Bike</th>
                 <th>Model</th>
-                <th>Surface Type</th>
-                <th>Amount in stock</th>
                 <th>Delete</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var bike in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(bike.Name, "Edit", "Bikes", new { id = bike.Id }, null)</td>
-                    <td>@bike.Model</td>
-                    <td>@bike.SurfaceType.Name</td>
-                    <td>@bike.AmountInStock</td>
-                    <td><button type="button" data-bike-id="@bike.Id" class="btn-link js-delete">Delete</button></td>
-                </tr>
-            }
+    
         </tbody>
     </table>
 
-}
+
 
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            var table = $("#bikes").DataTable();
+            $("#bikes").DataTable({
+                ajax: {
+                    url: "https://localhost:44329/api/bikes",
+                    dataSrc: ""
+                },
+                columns: [
+
+                    {
+                        data: "name",
+                        render: function (data, type, bike) {
+                            return "<a href='/bikes/edit/" + bike.id + "'>" + bike.name + "</a>";
+                        }
+                    },
+
+                    {
+                        data: "model"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-bike-id=" + data + ">Delete</button>";
+                        }
+                    },
+
+              
+                ]
+                });
+
+             
+        
+           
 
             $("#bikes").on("click", ".js-delete", function () {
 
