@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BikeToGoRental.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using BikeToGoRental.ViewModels;
 
 namespace BikeToGoRental.Controllers
 {
@@ -148,7 +149,7 @@ namespace BikeToGoRental.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(ViewModels.RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -164,7 +165,7 @@ namespace BikeToGoRental.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                  
+  
                  await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -377,7 +378,15 @@ namespace BikeToGoRental.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Birthdate = model.Birthdate
+                };
+
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

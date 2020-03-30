@@ -54,9 +54,9 @@ namespace BikeToGoRental
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+             appId: "227896808407478",
+             appSecret: "a238659f9b11707323b7e31a3bf6fd00");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

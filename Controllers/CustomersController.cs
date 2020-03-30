@@ -11,7 +11,7 @@ namespace BikeToGoRental.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers
+         // GET: Customers
         private ApplicationDbContext _context;
 
         public CustomersController()
@@ -77,9 +77,12 @@ namespace BikeToGoRental.Controllers
         // GET: Customers and MembershipTypes
         public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            if (User.IsInRole("CanManageCustomers"))
 
-            return View(customers);
+                return View("Index");
+
+                return View("ReadOnlyIndex");
+
         }
 
 
