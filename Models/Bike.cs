@@ -21,7 +21,9 @@ namespace BikeToGoRental.Models
         public string FrameSize { get; set; }
 
         [Range(1, 10)]
-        public int AmountInStock { get; set; }
+        public byte AmountInStock { get; set; }
+
+        public byte AmountAvailable { get; set; }
 
     }
 }

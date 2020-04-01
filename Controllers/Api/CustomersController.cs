@@ -18,11 +18,18 @@ namespace BikeToGoRental.Controllers.Api
         }
 
         // GET api/customers
-        public IEnumerable<Customer> GetCustomers()
+        public IEnumerable<Customer> GetCustomers(string query = null)
 
         {
-            return _context.Customers.Include(c => c.MembershipType).ToList();
+            var customersQuery = _context.Customers
+            .Include(c => c.MembershipType);
 
+            if (!String.IsNullOrWhiteSpace(query))
+                customersQuery = customersQuery.Where(c => c.Name.Contains(query));
+
+                
+
+                 return _context.Customers.Include(c => c.MembershipType).ToList();
         }
 
         // GET api/customers/1
