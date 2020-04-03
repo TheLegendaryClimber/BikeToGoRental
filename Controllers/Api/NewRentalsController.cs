@@ -17,6 +17,7 @@ namespace BikeToGoRental.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDto newRental)
         {        

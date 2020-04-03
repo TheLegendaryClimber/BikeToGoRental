@@ -12,9 +12,11 @@ namespace BikeToGoRental.Models
 
         [Required]
         public Customer Customer { get; set; }
+        
 
         [Required]
         public Bike Bike { get; set; }
+
 
         public DateTime DateRented { get; set; }
 

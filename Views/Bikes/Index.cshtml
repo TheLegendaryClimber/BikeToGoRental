@@ -16,6 +16,7 @@
             <tr>
                 <th>Bike</th>
                 <th>Model</th>
+                <th>Surface type</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -48,9 +49,12 @@
                         data: "model"
                     },
                     {
+                        data: "surfaceType.name"
+                    },
+                    {
                         data: "id",
                         render: function (data) {
-                            return "<button class='btn-link js-delete' data-bike-id=" + data + ">Delete</button>";
+                            return "<button class='btn btn-danger js-delete' data-bike-id=" + data + ">Delete</button>";
                         }
                     },
 

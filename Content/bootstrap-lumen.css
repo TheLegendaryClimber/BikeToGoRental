@@ -3363,13 +3363,6 @@ fieldset:disabled a.btn {
           box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.5);
 }
 
-.btn-link {
-  font-weight: 400;
-  color: #FFFFFF !important;
-  text-decoration: none;
-  background-color: #FF4136;
-}
-
 .btn-link:hover {
   color: #0d5875;
   text-decoration: underline;
@@ -10786,12 +10779,10 @@ a.text-dark:hover, a.text-dark:focus {
   border-style: solid;
   border-width: 0 1px 4px 1px;
   text-transform: uppercase;
-  background-color: lightgrey;
 }
 
 .btn:not(.disabled):hover {
-  margin-top: 1px;
-  border-bottom-width: 3px;
+  
 }
 
 .btn:not(.disabled):active {
@@ -10820,8 +10811,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn-danger {
-  border-color: #ff291d;
+  background-color: #ff291d;
+  border-color:#e72525;
 }
+    .btn-danger:hover {
+        color: #fff;
+        background-color: #e72525;
+        border-color: #e72525;
+    }
 
 .btn-warning {
   border-color: #ff7702;
