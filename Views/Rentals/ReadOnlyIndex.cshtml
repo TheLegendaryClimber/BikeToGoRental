@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BikeToGoRental.Models.Rental>
+@{
+    ViewBag.Title = "Rentals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center;">All Rentals</h2>
+
+
+<table id="rentals" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Bike</th>
+            <th>Date Rented</th>
+            <th>Membership Period</th>
+            <th>Date Returned</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#rentals").DataTable({
+                ajax: {
+                    url: "https://localhost:44329/api/rentals",
+                    dataSrc: ""
+                },
+                columns: [
+
+                    {
+                        data: "customer.name",                                           
+                    },
+                    {
+                        data: "bike.name"
+                    },
+                    {
+                        data: "dateRented"
+                    },
+                    {
+                        data: "customer.membershipType.name"
+                    },
+                    {
+                        data: "dateReturned"
+                    },
+                    
+                ]
+            });          
+        });
+
+
+    </script>
+
+}

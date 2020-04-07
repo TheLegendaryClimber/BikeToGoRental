@@ -11,7 +11,11 @@ namespace BikeToGoRental.Controllers
         // GET: Rentals
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole("CanManageRentals"))
+
+            return View("Index");
+
+            return View("ReadOnlyIndex");
         }
 
         // GET: Rentals/New

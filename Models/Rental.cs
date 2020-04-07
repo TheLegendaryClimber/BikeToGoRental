@@ -17,9 +17,11 @@ namespace BikeToGoRental.Models
         [Required]
         public Bike Bike { get; set; }
 
-
         public DateTime DateRented { get; set; }
 
         public DateTime? DateReturned { get; set; }
+        
     }
+
+
 }

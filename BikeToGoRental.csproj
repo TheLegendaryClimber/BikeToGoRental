@@ -238,6 +238,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\BikesController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
@@ -339,6 +340,14 @@
     <Compile Include="Migrations\202004031253518_AddingRentalTable.cs" />
     <Compile Include="Migrations\202004031253518_AddingRentalTable.designer.cs">
       <DependentUpon>202004031253518_AddingRentalTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061826360_DbUpdate.cs" />
+    <Compile Include="Migrations\202004061826360_DbUpdate.designer.cs">
+      <DependentUpon>202004061826360_DbUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004070955163_Update.cs" />
+    <Compile Include="Migrations\202004070955163_Update.designer.cs">
+      <DependentUpon>202004070955163_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -631,6 +640,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1-vsdoc.js" />
     <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.js" />
     <Content Include="packages\jQuery.3.4.1\Content\Scripts\jquery-3.4.1.min.js" />
@@ -1129,8 +1139,12 @@
     <Content Include="Views\Customers\ReadOnlyIndex.cshtml" />
     <Content Include="Views\Rentals\New.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
+    <Content Include="Views\Rentals\ReadOnlyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -1203,6 +1217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004031253518_AddingRentalTable.resx">
       <DependentUpon>202004031253518_AddingRentalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061826360_DbUpdate.resx">
+      <DependentUpon>202004061826360_DbUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004070955163_Update.resx">
+      <DependentUpon>202004070955163_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

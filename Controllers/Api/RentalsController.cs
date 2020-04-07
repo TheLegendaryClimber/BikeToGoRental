@@ -24,7 +24,9 @@ namespace BikeToGoRental.Controllers.Api
 
         {
             return _context.Rentals.Include(c => c.Customer)
-            .Include(b => b.Bike).ToList();
+            .Include(b => b.Bike)
+            .Include(m => m.Customer.MembershipType).
+            ToList();
                 
 
         }
