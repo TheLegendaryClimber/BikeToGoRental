@@ -5,13 +5,25 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="nav navbar-nav">
-            <li><a class="nav-design">@Html.ActionLink("Rentals", "Index", "Rentals")</a></li>
-            <li><a class="nav-design">@Html.ActionLink("Customers", "Index", "Customers")</a></li>
-            <li><a class="nav-design">@Html.ActionLink("Bikes", "Index", "Bikes")</a></li>
-        </ul>
+        @if (Roles.IsUserInRole("CanManageCustomers"))
+        {
+            <ul class="nav navbar-nav">
+                <li><a class="nav-design">@Html.ActionLink("Rentals", "Index", "Rentals")</a></li>
+                <li><a class="nav-design">@Html.ActionLink("Customers", "Index", "Customers")</a></li>
+                <li><a class="nav-design">@Html.ActionLink("Bikes", "Index", "Bikes")</a></li>
+            </ul>
+        }
+        else
+        {
+            <ul class="nav navbar-nav">
+
+                <li><a class="nav-design">@Html.ActionLink("Bikes", "Index", "Bikes")</a></li>
+            </ul>
+        }
+
         <div class="navbar-nav ml-auto">
             @Html.Partial("_LoginPartial")
         </div>
     </div>
 </nav>
+
