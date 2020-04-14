@@ -9,16 +9,20 @@
 
 </head>
 <body>
-   @Html.Partial("NavBar")
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - BikeToGoRental</p>
-        </footer>
-    </div>
+    <div id="wrapper">
+        @Html.Partial("NavBar")
+        <div class="container-fluid">
+            @RenderBody()
+            <hr />
 
-    @Scripts.Render("~/bundles/lib")
-    @RenderSection("scripts", required: false)
+
+            @Scripts.Render("~/bundles/lib")
+            @RenderSection("scripts", required: false)
+
+            <div class="footer">
+                <p>&copy; @DateTime.Now.Year - BikeToGoRental</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

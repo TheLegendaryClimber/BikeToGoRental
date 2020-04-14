@@ -83,7 +83,7 @@ namespace BikeToGoRental.Controllers
 
 
         // GET: Bikes and Surface Types
-
+        [AllowAnonymous]
         public ViewResult Index()
         {
             if (User.IsInRole("CanManageBikes"))
