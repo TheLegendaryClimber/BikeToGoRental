@@ -90,8 +90,6 @@ body {
 }
 
 
-
-
 article, aside, figcaption, figure, header, hgroup, main, nav, section {
     display: block;
 }
@@ -101,10 +99,32 @@ article, aside, figcaption, figure, header, hgroup, main, nav, section {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 60px;
     width: 100%;
+    
     background: rgba(0, 0, 0, 0.1);
+
+        }
+
+.footer-nav {
+    float: left;
+
+        }
+
+.footer-nav li {
+        display: inline-block;
+    }
+
+.fa {
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px 42px;
+    border-radius: 50%;
 }
+
+
 
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
@@ -287,15 +307,17 @@ svg {
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
+    white-space: nowrap !important;
+    width: 100% !important;
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #999;
-  text-align: left;
-  caption-side: bottom;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #999;
+    text-align: left;
+    caption-side: bottom;
 }
 
 th {
@@ -752,8 +774,10 @@ pre code {
     padding-left: 15px;
     margin-top: 35px;
     margin-left: 5px;
+    margin-bottom: 35px;
     border-radius: 25px;
-    border: 2px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
+    background: rgba(0, 0, 0, 0.2) !important;
 }
 
 
@@ -1995,6 +2019,7 @@ pre code {
   margin-bottom: 1rem;
   color: #FFF;
 }
+
 
 .table th,
 .table td {
@@ -5098,11 +5123,10 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////5ubmueBsSwAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=);
 }
 
 .navbar-light .navbar-text {
@@ -10846,6 +10870,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table th {
     background-color: #fff !important;
   }
+
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #dee2e6 !important;

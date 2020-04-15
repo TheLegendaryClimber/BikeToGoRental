@@ -351,6 +351,10 @@
     <Compile Include="Migrations\202004070955163_Update.designer.cs">
       <DependentUpon>202004070955163_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004151539150_AddingPictureToBikeModel.cs" />
+    <Compile Include="Migrations\202004151539150_AddingPictureToBikeModel.designer.cs">
+      <DependentUpon>202004151539150_AddingPictureToBikeModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -591,6 +595,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Image\bicycle.jpg" />
+    <Content Include="Image\iconfinder_Website-Facebook-social_4581602.png" />
+    <Content Include="Image\iconfinder_Website-Instagram-social_4581606 %281%29.png" />
+    <Content Include="Image\iconfinder_Website-Whatsapp-social_4581589.png" />
+    <Content Include="Image\iconfinder_Website-Youtube_4581590.png" />
+    <Content Include="Image\mondraker-removebg-preview.png" />
+    <Content Include="Image\scottaspect-removebg-preview.png" />
+    <Content Include="Image\specializedrockhopper-removebg-preview.png" />
+    <Content Include="Image\trekxcaliber9-removebg-preview.png" />
     <Content Include="obj\Debug\BikeToGoRental.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\BikeToGoRental.dll" />
     <Content Include="obj\Debug\BikeToGoRental.pdb" />
@@ -1223,6 +1235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004070955163_Update.resx">
       <DependentUpon>202004070955163_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004151539150_AddingPictureToBikeModel.resx">
+      <DependentUpon>202004151539150_AddingPictureToBikeModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -10,20 +10,26 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-5-read">
-                        <img class="bike-pics" src="https://i7.pngguru.com/preview/181/269/245/downhill-mountain-biking-giant-bicycles-downhill-bike-mountain-bike-bike.jpg" />
+                        <img class="bike-pics" src="Image/trekxcaliber9-removebg-preview.png" />
                         <button id="bike-order" type="submit" class="btn btn-primary">
                             Order now
                         </button>
                     </div>
                     <div class="col-sm-5-read">
-                        <img class="bike-pics" src="https://i7.pngguru.com/preview/181/269/245/downhill-mountain-biking-giant-bicycles-downhill-bike-mountain-bike-bike.jpg" />
+                        <img class="bike-pics" src="Image/scottaspect-removebg-preview.png" />
                         <button id="bike-order" type="submit" class="btn btn-primary">
                             Order now
                         </button>
                     </div>
 
                     <div class="col-sm-5-read">
-                        <img class="bike-pics" src="https://i7.pngguru.com/preview/181/269/245/downhill-mountain-biking-giant-bicycles-downhill-bike-mountain-bike-bike.jpg" />
+                        <img class="bike-pics" src="Image/specializedrockhopper-removebg-preview.png" />
+                        <button id="bike-order" type="submit" class="btn btn-primary">
+                            Order now
+                        </button>
+                    </div>
+                    <div class="col-sm-5-read">
+                        <img class="bike-pics" src="Image/mondraker-removebg-preview.png" />
                         <button id="bike-order" type="submit" class="btn btn-primary">
                             Order now
                         </button>
@@ -53,8 +59,8 @@
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
                 div.id = "div" + counter++;
-                div.innerHTML = '<span class="col-bike">Name:' + data[i].name + '<br/>Model: ' + data[i].model + '<br/>Surface type:'
-                    + data[i].surfaceType.name + '<br/>Gears: ' + data[i].gears + '<br/>Sizes:' + data[i].frameSize + '</span>';
+                div.innerHTML = '<span class="col-bike">Name: ' + data[i].name + '<br/>Model: ' + data[i].model + '<br/>Surface type: '
+                    + data[i].surfaceType.name + '<br/>Gears: ' + data[i].gears + '<br/>Sizes: ' + data[i].frameSize + '</span>';
                 mainContainer.children[i].appendChild(div)
             }
 

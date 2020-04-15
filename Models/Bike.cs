@@ -25,5 +25,7 @@ namespace BikeToGoRental.Models
 
         public byte AmountAvailable { get; set; }
 
+        public string BikeImage { get; set; }
+
     }
 }

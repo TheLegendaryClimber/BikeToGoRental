@@ -4,26 +4,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2 style="text-align: center;">Bikes</h2>
 
-
-
-    <p>
-        @Html.ActionLink("New Bike", "New", "Bikes", null, new { @class = "btn btn-primary" })
-    </p>
-    <table id="bikes" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Bike</th>
-                <th>Model</th>
-                <th>Surface type</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-    
-        </tbody>
-    </table>
+<p>
+    @Html.ActionLink("New Bike", "New", "Bikes", null, new { @class = "btn btn-primary" })
+</p>
+<table id="bikes" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Bike:</th>
+            <th>Model:</th>
+            <th>Surface type:</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 
 
 
@@ -31,7 +29,8 @@
 {
     <script>
         $(document).ready(function () {
-            var table =  $("#bikes").DataTable({
+            var table = $("#bikes").DataTable({
+                responsive: true,
                 ajax: {
                     url: "https://localhost:44329/api/bikes",
                     dataSrc: ""
@@ -58,13 +57,13 @@
                         }
                     },
 
-              
-                ]
-                });
 
-             
-        
-           
+                ]
+            });
+
+
+
+
 
             $("#bikes").on("click", ".js-delete", function () {
 

@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - BikeToGo Rental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.18/b-1.5.2/fc-3.2.5/fh-3.1.4/r-2.2.2/sc-1.5.0/datatables.min.css" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -19,10 +21,22 @@
             @Scripts.Render("~/bundles/lib")
             @RenderSection("scripts", required: false)
 
-            <div class="footer">
-                <p>&copy; @DateTime.Now.Year - BikeToGoRental</p>
-            </div>
+        <div class="footer">
+            <footer>
+                <ul class="footer-nav">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-youtube"></a></li>
+
+                </ul>
+
+
+                    <p style="float:right; margin-top: 15px; margin-right: 5px;">&copy; @DateTime.Now.Year - BikeToGoRental</p>
+               
+            </footer>
+        </div>
         </div>
     </div>
 </body>
 </html>
+
