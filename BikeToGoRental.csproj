@@ -1154,6 +1154,7 @@
     <Content Include="Views\Rentals\New.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
     <Content Include="Views\Rentals\ReadOnlyIndex.cshtml" />
+    <Content Include="Views\Customers\MyRentals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\" />

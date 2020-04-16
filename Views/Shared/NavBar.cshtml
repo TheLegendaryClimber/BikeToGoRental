@@ -22,6 +22,18 @@
                     </ul>
                 }
 
+
+                @if (Request.IsAuthenticated && !User.IsInRole("CanManageCustomers"))
+                {
+
+                    <ul class="nav navbar-nav">
+
+                        <li><a class="nav-design">@Html.ActionLink("My Rentals", "MyRentals", "Customers", routeValues: null, htmlAttributes: new { id = "navLink" })</a></li>
+                    </ul>
+
+                }
+
+
                 <div class="navbar-nav ml-auto">
                     @Html.Partial("_LoginPartial")
                 </div>
